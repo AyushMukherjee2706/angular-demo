@@ -7,6 +7,7 @@ import { FilesComponent } from './components/files/files.component';
 import { ListFilesComponent } from './components/list-files/list-files.component';
 import { LoginComponent } from './components/login/login.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 
@@ -21,24 +22,25 @@ import { HomeComponent } from './components/home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
-    RouterModule.forRoot([  // write a array of routes 
-      { 
-        path: 'login',
-        component : LoginComponent
+    HttpClientModule,
+    FormsModule
+    // RouterModule.forRoot([  // write a array of routes 
+    //   { 
+    //     path: 'login',
+    //     component : LoginComponent
   
-      },
-      { 
-        path: 'admin',
-        component : AdminComponent
+    //   },
+    //   { 
+    //     path: 'admin',
+    //     component : AdminComponent
   
-      },
-      { 
-        path: 'home',
-        component : HomeComponent
+    //   },
+    //   { 
+    //     path: 'home',
+    //     component : HomeComponent
   
-      }
-    ])
+    //   }
+    // ])
     
   ],
   providers: [],

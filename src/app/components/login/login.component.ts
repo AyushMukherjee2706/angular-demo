@@ -1,35 +1,39 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
+import {Router} from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-  Auth: any;
+export class LoginComponent {
+  
 
-  constructor() { }
+  email = 'eve.holt@reqres.in'
+  password = 'cityslicka';
 
-  ngOnInit() {
+  constructor(private api: AuthService, private user: UserService,  private router: Router) {
   }
 
-  loginUser(event){  // made a method that we are passing in html form
-    event.preventDefault() 
-    // to prevent the default behaviour of page reloading. without this the page was loading
-    // but again getting rolled back to login rather than accepting the values of username and password.
-    const target = event.target
-    //backend , to get the value of username and pass
-    const username = target.querySelector('#username').value
-    const password = target.querySelector('#password').value
-    // Inject the auth service, call user details func that we made in auth.ser
-    this.Auth.getUserDetails(username,password).subscribe(data => {
-      if(data.success){
-        // redirect the person to admin 
-      }else {
-        window.alert(data.message)
-      }
-    })
-    console.log(username,password)
+  
+
+  tryLogin() {
+    this.api.login(
+      this.email,
+      this.password
+    )
+      .subscribe(
+        r => {
+          if (r.token) {   
+            this.user.setToken(r.token)         
+            this.router.navigateByUrl('/dashboard');
+          }
+        },
+        r => {
+          alert(r.error.error);
+        });
   }
 
 }
