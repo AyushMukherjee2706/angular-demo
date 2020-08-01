@@ -28,7 +28,7 @@ export class LoginComponent {
         r => {
           if (r.token) {   
             this.user.setToken(r.token)         
-            this.router.navigateByUrl('/dashboard');
+            this.router.navigateByUrl('');
           }
         },
         r => {
