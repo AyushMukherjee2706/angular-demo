@@ -1,5 +1,6 @@
 
-<nav class="navbar navbar-expand-lg navbar-light " style="background-color: rgb(162, 219, 252);">
+
+<nav *ngIf="isDisplay()" class="navbar navbar-expand-lg navbar-light " style="background-color: rgb(162, 219, 252);">
   <img  src="./assets/Deloitte_logo.png" style="width: 35px; height: 35px; margin-right: 10px;">
   <a class="navbar-brand font-weight-bold" href="#">Practitioner's landing Page</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
