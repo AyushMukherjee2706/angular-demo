@@ -8,6 +8,8 @@ import { ListFilesComponent } from "./components/list-files/list-files.component
 import { LoginComponent } from "./components/login/login.component";
 import { AdminComponent } from "./components/admin/admin.component";
 import { FormsModule } from "@angular/forms";
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { FormsModule } from "@angular/forms";
     ListFilesComponent,
     LoginComponent,
     AdminComponent,
+    NavbarComponent,
+    HomeComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

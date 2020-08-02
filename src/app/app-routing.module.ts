@@ -5,10 +5,12 @@ import { FilesComponent } from './components/files/files.component';
 import { AppComponent } from './app.component';
 import { AuthGuardService } from './services/auth-guard.service'
 import { LoginComponent } from './components/login/login.component'
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [  
-  {path: '', component: AppComponent, canActivate: [AuthGuardService]},
-  {path: 'upload-file', component: FilesComponent, canActivate: [AuthGuardService]},
+  {path: '', component: HomeComponent, canActivate: [AuthGuardService]},
+  {path:'upload-file', component: FilesComponent, canActivate: [AuthGuardService]},
   {path:'all-files', component: ListFilesComponent, canActivate: [AuthGuardService]},
   {path:'login', component: LoginComponent}
 ];

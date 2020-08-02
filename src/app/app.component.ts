@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { UserService } from './services/user.service'
 
 @Component({
   selector: 'app-root',
@@ -7,11 +6,5 @@ import { UserService } from './services/user.service'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-demo';
-
-  constructor(private userSerice: UserService){}
-  
-  isDisplay(){
-      return this.userSerice.isLogged()
-  }
+  title = 'angular-demo';  
 }
