@@ -20,7 +20,7 @@ export class FilesService {
     return this.http.request(req);
   }
 
-  // getFiles(): Observable<any> {
-  //   return this.http.get(`${this.baseUrl}/files`);
-  // }
+  getAllFiles(): Observable<any> {
+    return this.http.get('http://localhost:8080/all');
+  }
 }
