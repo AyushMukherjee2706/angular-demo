@@ -15,14 +15,11 @@ export class FilesComponent implements OnInit {
   currentFile: File;
   progress = 0;
   message = '';
-  data: [][];
-
-  // fileInfos: Observable<any>;
+  data: [][];  
 
   constructor(private fileService: FilesService) { }
 
   ngOnInit() {
-    // this.fileInfos = this.fileService.getFiles();
   }
 
   selectFile(event) {
@@ -32,18 +29,19 @@ export class FilesComponent implements OnInit {
 
 
   upload() {
-    // this.progress = 0;
   
     this.currentFile = this.selectedFiles.item(0);
-    this.fileService.upload(this.currentFile).subscribe(
+    // this.fileService.upload(this.currentFile).subscribe(
       
-      err => {
-        console.log('error')
-        this.progress = 0;
-        this.message = 'Could not upload the file!';
-        this.currentFile = undefined;
-      });
-  
+    //   err => {
+    //     console.log('error')
+    //     this.progress = 0;
+    //     this.message = 'Could not upload the file!';
+    //     this.currentFile = undefined;
+    //   });
+    
+    this.fileService.sendData({"data":this.data})
+    // this.fileService.test();
     this.selectedFiles = undefined;
   }
 
@@ -71,7 +69,7 @@ export class FilesComponent implements OnInit {
       console.log(this.data);
 
       let x = this.data.slice(1);
-      console.log(x);
+      console.log(x);      
 
     };
 

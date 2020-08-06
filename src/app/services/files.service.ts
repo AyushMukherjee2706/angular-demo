@@ -23,4 +23,23 @@ export class FilesService {
   getAllFiles(): Observable<any> {
     return this.http.get('http://localhost:8080/all');
   }
+
+  sendData(data: any){
+    console.log("sending data")
+    this.http.post('http://localhost:8080/data', data).subscribe(      
+      err=>{
+        console.error(err)
+      }
+    );
+  }
+
+  test(){
+    console.log("sending test")
+    this.http.get('http://localhost:8080/test').subscribe(
+      res =>{
+        console.log(res)
+      }
+    );
+    
+  }
 }

@@ -10,6 +10,7 @@ import { AdminComponent } from "./components/admin/admin.component";
 import { FormsModule } from "@angular/forms";
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { HomeComponent } from './components/home/home.component';
     NavbarComponent,
     HomeComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, NgSelectModule],
   providers: [],
   bootstrap: [AppComponent],
 })
