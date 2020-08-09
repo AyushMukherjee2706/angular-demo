@@ -1,16 +1,16 @@
 <app-navbar></app-navbar>
 
 <div class="container">
-    <div class="font-weight-bold" style="font-size: 5rem;">Projects:</div>
+    <div class="font-weight-bold" style="font-size: 3rem;">Projects:</div>
     <div class="row">
         <div style="margin:20px;" *ngFor="let project of projects">
-            <div class="card" style="width: 21rem;">
+            <div class="card " style="width: 21rem; background-color: rgb(255, 255, 234);">
                 <div class="card-body">
-                    <h5 class="card-title">{{project.title}}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">{{project.subtitle}}</h6>
-                    <p class="card-text">{{project.detail}}</p>
-                    <a routerLink="/upload-file" class="btn btn-primary mr-2">upload file</a>
-                    <a routerLink="/all-files" class="btn btn-primary">all files</a>
+                    <h5 class="card-title">{{project}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">This is subtitle</h6>
+                    <p class="card-text">some text should apper here</p>
+                    
+                    <a routerLink="/all-files" class="btn btn-primary">view data</a>
                 </div>
             </div>
         </div>

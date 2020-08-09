@@ -12,76 +12,50 @@
   </ul>
 </div> -->
 
-<h1>Angular ng-select <small class="text-muted"><a target="_blank" href="https://github.com/ng-select/ng-select">Open in
-      Github</a></small></h1>
-<label>Your first ng-select</label>
-<!-- <ng-select [items]="cities" bindLabel="name" placeholder="Select city" [(ngModel)]="selectedCity">
-</ng-select> -->
-<!-- <p>
-  Selected city: {{selectedCity | json}}
-</p>
-<hr />
 
-<label>Multiselect with custom bindings</label>
-<ng-select [items]="cities2" bindLabel="name" bindValue="id" [multiple]="true" placeholder="Select cities"
-  [(ngModel)]="selectedCityIds">
-</ng-select>
-<p>
-  Selected cities: {{selectedCityIds}}
-</p>
-<hr />
+<div>
+  <label>Select module</label>
 
-<label>Custom tags</label>
-<ng-select [items]="users" bindLabel="name" bindValue="id" [addTag]="addCustomUser" [multiple]="true"
-  placeholder="Select user or add custom tag" [(ngModel)]="selectedUserIds">
-</ng-select>
-<p>
-  Selected user: {{selectedUserIds}}
-</p>
-<hr />
+  <ng-select [items]="module" bindLabel="name" bindValue="name" [multiple]="true" placeholder="Select module"
+    [(ngModel)]="selectedModules">
+  </ng-select>  
+</div>
 
-<label>Custom templates</label>
-<ng-select [items]="cities3" bindLabel="name" bindValue="name" placeholder="Select city" [(ngModel)]="selectedCityName">
-  <ng-template ng-header-tmp>
-    Custom header
-  </ng-template>
-  <ng-template ng-label-tmp let-item="item">
-    <img height="15" width="15" [src]="item.avatar" />
-    <b>{{item.name}}</b> is cool
-  </ng-template>
-  <ng-template ng-option-tmp let-item="item" let-index="index">
-    <img height="15" width="15" [src]="item.avatar" />
-    <b>{{item.name}}</b>
-  </ng-template>
-  <ng-template ng-footer-tmp>
-    Custom footer
-  </ng-template>
-</ng-select>
-<p>
-  Selected city: {{selectedCityName}}
-</p>
-<hr />
 
-<label>Hight performance. Handles even 10000 items.</label>
-<ng-select [items]="cities4" [virtualScroll]="true" bindLabel="name" bindValue="id" placeholder="Select city"
-  [(ngModel)]="selectedCityId">
-</ng-select>
-<p>
-  Selected city ID: {{selectedCityId}}
-</p>
-<hr />
+<div>
+  <label>Select type of resource</label>
+  <ng-select [items]="resource" bindLabel="name" bindValue="name" [multiple]="true" placeholder="Select resource"
+    [(ngModel)]="selectedResources">
+  </ng-select>  
+</div>
 
-<label>Append dropdown to body</label>
-<ng-select [items]="cities4" bindLabel="name" [virtualScroll]="true" bindValue="id" appendTo="body"
-  placeholder="Select city" [(ngModel)]="selectedCityId">
-</ng-select>
-<p>
-  Selected city ID: {{selectedCityId}}
-</p>
-<hr />
+<div>
+  <label>Select tower</label>
+  <ng-select [items]="tower" bindLabel="name" bindValue="name" [multiple]="true" placeholder="Select tower"
+    [(ngModel)]="selectedTowers">
+  </ng-select>  
+</div>
 
-<label>Grouping</label>
-<ng-select [items]="accounts" bindLabel="name" bindValue="name" groupBy="country" [(ngModel)]="selectedAccount">
-</ng-select>
+<div>
+  <label>Select practitioner</label>
+  <ng-select [items]="practitioner" bindLabel="name" bindValue="name" [multiple]="true"
+    placeholder="Select practitioner" [(ngModel)]="selectedPractitioners">
+  </ng-select>
+  
+</div>
 
-<div style="margin-top:300px"></div> -->
+<div>
+  <label>Select location</label>
+  <ng-select [items]="location" bindLabel="name" bindValue="name" [multiple]="true"
+    placeholder="Select loaction" [(ngModel)]="selectedLocations">
+  </ng-select>  
+</div>
+
+
+<button class="btn btn-success cen mt-4" (click)="testmulti()">
+  testmulti
+</button>
+
+
+
+<div style="margin-top:300px"></div>
