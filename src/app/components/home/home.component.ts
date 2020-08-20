@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.projectService.getAllProject().subscribe(projects => this.projects = projects)
-    console.log("What to do " + this.projects)
+    
   }
 
 }

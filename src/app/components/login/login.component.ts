@@ -29,10 +29,10 @@ export class LoginComponent {
 
   tryLogin() {
     this.api.login(this.email, this.password).subscribe(
-      (r) => {
+      (r) => { // response of api
         if (r.token) {
-          this.user.setToken(r.token);
-          this.router.navigateByUrl(this.return);
+          this.user.setToken(r.token);// token is setting up for user
+          this.router.navigateByUrl(this.return); // returning the url path to login
         }
       },
       (r) => {

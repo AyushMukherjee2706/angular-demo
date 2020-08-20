@@ -17,7 +17,7 @@ export class FilesComponent implements OnInit {
 
   constructor(private fileService: FilesService) {}
 
-  ngOnInit() {}
+  ngOnInit() {}   
 
   selectFile(event) {
     this.isUpload = false
@@ -26,8 +26,7 @@ export class FilesComponent implements OnInit {
   }
 
   upload() {
-    // this.currentFile = this.selectedFiles.item(0);
-
+    
     console.log("data_to_send check: " + this.data_to_send)
     this.fileService.sendData( this.data_to_send );
     this.selectedFiles = null;
@@ -60,7 +59,7 @@ export class FilesComponent implements OnInit {
       var j = 0;
       for (let i = 1; i < this.data.length; i++) {        
         let people: ExcelDataModel = new ExcelDataModel(this.data[i][j], this.data[i][j + 1], this.data[i][j + 2], this.data[i][j + 3], this.data[i][j + 4], this.data[i][j + 5], this.data[i][j + 6], this.data[i][j + 7])
-        console.log("testing prople : "+ people)
+        //console.log("testing prople : "+ people)
         this.data_to_send.push(people)
         };        
 

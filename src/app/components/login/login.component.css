@@ -1,0 +1,21 @@
+.card-title{
+
+    text-align: center;
+    
+}
+
+.btn-primary{
+    width: 91.5%;
+			background: #4CAF50 !important;
+			color: white !important;
+}
+
+.btn-primary:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+.wrapper {
+    padding-top: 1.5cm;
+    text-align: center;
+    
+  }

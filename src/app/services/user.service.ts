@@ -10,7 +10,7 @@ export class UserService {
 
   // token
   setToken(token: string): void {
-    localStorage.setItem(TOKEN, token);
+    localStorage.setItem(TOKEN, token); //setting the token in local 
     // this.token = token;
   }
 

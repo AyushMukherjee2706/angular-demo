@@ -20,8 +20,8 @@ export class ProjectService {
     return this.http.get<ExcelDataModel[]>("http://localhost:8080/all")
   }
 
-  getResult(body: any){
-    console.log(body)
-    this.http.post<any>("http://localhost:8080/result", body).subscribe( err =>{console.log(err)})
+ 
+  getResult(body: any): Observable<ExcelDataModel[]>{
+    return this.http.post<ExcelDataModel[]>("http://localhost:8080/result", body)
   }
 }

@@ -1,18 +1,7 @@
 <app-navbar></app-navbar>
 
-<!-- <div class="card " style="width: 50%; margin: 30px auto;">
-  <div class="card-header">List of Files</div>
-  <ul class="list-group list-group-flush" *ngFor="let file of files ">
-    <li class="list-group-item">
-      <a href="#">{{ file }}</a> -->
-<!-- <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-        <path d="M0 0h24v24H0V0z" fill="none" />
-        <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9zm7.5-5l-1-1h-5l-1 1H5v2h14V4z" /></svg>  -->
-<!-- </li>
-  </ul>
-</div> -->
 
-
+<div class = "container">
 <div>
   <label>Select module</label>
 
@@ -36,26 +25,64 @@
   </ng-select>  
 </div>
 
-<div>
-  <label>Select practitioner</label>
-  <ng-select [items]="practitioner" bindLabel="name" bindValue="name" [multiple]="true"
-    placeholder="Select practitioner" [(ngModel)]="selectedPractitioners">
-  </ng-select>
-  
-</div>
 
 <div>
   <label>Select location</label>
   <ng-select [items]="location" bindLabel="name" bindValue="name" [multiple]="true"
-    placeholder="Select loaction" [(ngModel)]="selectedLocations">
+    placeholder="Select location" [(ngModel)]="selectedLocations">
   </ng-select>  
+</div>
 </div>
 
 
-<button class="btn btn-success cen mt-4" (click)="testmulti()">
-  testmulti
-</button>
+<div class="wrapper"> 
+ <button class="btn btn-success cen mt-4" (click)="testmulti()">Get Results </button>
+</div>
 
 
 
-<div style="margin-top:300px"></div>
+
+  <!-- <div class="card-header">Filtered Result</div> 
+  <ul class="list-group list-group-flush" *ngFor="let res of filtered_result ">
+    <li class="list-group-item"> -->
+      <!-- <div>{{ res | json }}</div>   -->
+    <!-- </li>
+  </ul> -->
+
+
+<div style="margin-top:50px"></div>
+  
+<div class ="container">
+  <table class = "table table-trapped"> 
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>E-mail Id</th>
+        <th>Type of Resource</th>
+        <th>Project</th>
+        <th>Tower</th>
+        <th>Module</th>
+        <th>Certification</th> 
+        <th>Location</th>
+
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let res of filtered_result">
+
+        <td>{{ res.practitionerName }}</td>
+        <td>{{ res.emailId }}</td>
+        <td>{{ res.typeOfResource }}</td>
+        <td>{{ res.project }}</td>
+        <td>{{ res.tower }}</td>
+        <td>{{ res.module }}</td>
+        <td>{{ res.certification}}</td>
+        <td>{{ res.location }}</td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+</div>

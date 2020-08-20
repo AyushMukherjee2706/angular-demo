@@ -3,7 +3,7 @@ export class ExcelDataModel {
     project: string;
     tower: string;
     module: string;
-    certificationYear: string;
+    certification: string;
     typeOfResource: string;
     emailId: string;
     location: string;
@@ -13,7 +13,7 @@ export class ExcelDataModel {
         project: string,
         tower: string,
         module: string,
-        certificationYear: string,
+        certification: string,
         typeOfResource: string,
         emailId: string,
         location: string
@@ -22,7 +22,7 @@ export class ExcelDataModel {
         this.project = project;
         this.tower = tower;
         this.module = module;
-        this.certificationYear = certificationYear;
+        this.certification = certification;
         this.typeOfResource = typeOfResource;
         this.emailId = emailId;
         this.location = location;

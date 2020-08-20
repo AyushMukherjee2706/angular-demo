@@ -15,6 +15,7 @@ export class ListFilesComponent {
   practitioner: any[];
   location: any[];
   collected_data: any
+  filtered_result: ExcelDataModel[]
   constructor(private projectService: ProjectService) {
   }
 
@@ -46,8 +47,7 @@ export class ListFilesComponent {
 
     });
   }
-  selectedCity: any;
-
+  
   selectedTowers: string[];
   selectedModules: string[];
   selectedResources: string[];
@@ -62,11 +62,13 @@ export class ListFilesComponent {
                           resource: this.selectedResources,
                           practitioner:this.selectedPractitioners,
                         location: this.selectedLocations}
-                        console.log("Thsi is what: "+this.collected_data['tower'])
-    this.projectService.getResult(this.collected_data)
+                        console.log("This is what: "+this.collected_data['tower'])
+                        this.projectService.getResult(this.collected_data).subscribe(res => this.filtered_result = res)
     console.log(this.selectedTowers);
     console.log(this.selectedModules);
     console.log(this.selectedResources);
     console.log(this.selectedPractitioners);
   }
 }
+// this.collected data is the req body sent by front end
+//this.filtered is giving the filtered response to front end
