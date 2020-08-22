@@ -11,7 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 const routes: Routes = [  
   {path: '', component: HomeComponent, canActivate: [AuthGuardService]},
   {path:'upload-file', component: FilesComponent, canActivate: [AuthGuardService]},
-  {path:'all-files', component: ListFilesComponent, canActivate: [AuthGuardService]},
+  {path:'project-details/:id', component: ListFilesComponent, canActivate: [AuthGuardService]},
   {path:'login', component: LoginComponent}
 ];
 

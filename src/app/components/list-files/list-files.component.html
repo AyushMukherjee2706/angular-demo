@@ -1,59 +1,59 @@
 <app-navbar></app-navbar>
 
 
-<div class = "container">
-<div>
-  <label>Select module</label>
+<div class="container">
+  <div>
+    <label>Select module</label>
 
-  <ng-select [items]="module" bindLabel="name" bindValue="name" [multiple]="true" placeholder="Select module"
-    [(ngModel)]="selectedModules">
-  </ng-select>  
+    <ng-select [items]="module" bindLabel="name" bindValue="name" [multiple]="true" placeholder="Select module"
+      [(ngModel)]="selectedModules">
+    </ng-select>
+  </div>
+
+
+  <div>
+    <label>Select type of resource</label>
+    <ng-select [items]="resource" bindLabel="name" bindValue="name" [multiple]="true" placeholder="Select resource"
+      [(ngModel)]="selectedResources">
+    </ng-select>
+  </div>
+
+  <div>
+    <label>Select tower</label>
+    <ng-select [items]="tower" bindLabel="name" bindValue="name" [multiple]="true" placeholder="Select tower"
+      [(ngModel)]="selectedTowers">
+    </ng-select>
+  </div>
+
+
+  <div>
+    <label>Select location</label>
+    <ng-select [items]="location" bindLabel="name" bindValue="name" [multiple]="true" placeholder="Select location"
+      [(ngModel)]="selectedLocations">
+    </ng-select>
+  </div>
 </div>
 
 
-<div>
-  <label>Select type of resource</label>
-  <ng-select [items]="resource" bindLabel="name" bindValue="name" [multiple]="true" placeholder="Select resource"
-    [(ngModel)]="selectedResources">
-  </ng-select>  
-</div>
-
-<div>
-  <label>Select tower</label>
-  <ng-select [items]="tower" bindLabel="name" bindValue="name" [multiple]="true" placeholder="Select tower"
-    [(ngModel)]="selectedTowers">
-  </ng-select>  
-</div>
-
-
-<div>
-  <label>Select location</label>
-  <ng-select [items]="location" bindLabel="name" bindValue="name" [multiple]="true"
-    placeholder="Select location" [(ngModel)]="selectedLocations">
-  </ng-select>  
-</div>
-</div>
-
-
-<div class="wrapper"> 
- <button class="btn btn-success cen mt-4" (click)="testmulti()">Get Results </button>
+<div class="wrapper">
+  <button class="btn btn-success cen mt-4" (click)="testmulti()">Get Results </button>
 </div>
 
 
 
 
-  <!-- <div class="card-header">Filtered Result</div> 
+<!-- <div class="card-header">Filtered Result</div> 
   <ul class="list-group list-group-flush" *ngFor="let res of filtered_result ">
     <li class="list-group-item"> -->
-      <!-- <div>{{ res | json }}</div>   -->
-    <!-- </li>
+<!-- <div>{{ res | json }}</div>   -->
+<!-- </li>
   </ul> -->
 
 
 <div style="margin-top:50px"></div>
-  
-<div class ="container">
-  <table class = "table table-trapped"> 
+
+<div class="container">
+  <table class="table table-trapped">
     <thead>
       <tr>
         <th>Name</th>
@@ -62,7 +62,7 @@
         <th>Project</th>
         <th>Tower</th>
         <th>Module</th>
-        <th>Certification</th> 
+        <th>Certification</th>
         <th>Location</th>
 
       </tr>

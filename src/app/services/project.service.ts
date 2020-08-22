@@ -16,11 +16,10 @@ export class ProjectService {
     return this.http.get<any[]>("http://localhost:8080/project/all")
   }
 
-  getAllRecords(): Observable<ExcelDataModel[]> {
-    return this.http.get<ExcelDataModel[]>("http://localhost:8080/all")
+  getAllRecords(name: string): Observable<ExcelDataModel[]> {
+    return this.http.get<ExcelDataModel[]>("http://localhost:8080/project?name="+name)
   }
 
- 
   getResult(body: any): Observable<ExcelDataModel[]>{
     return this.http.post<ExcelDataModel[]>("http://localhost:8080/result", body)
   }
